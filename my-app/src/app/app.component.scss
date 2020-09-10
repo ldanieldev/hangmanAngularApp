@@ -1,0 +1,94 @@
+// color palette
+$darkBlue: #00263c;
+$mediumBlue: #003459;
+$lightBlue: #00a7e1;
+$black: #00171f;
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ccc;
+  background-color: $mediumBlue;
+  height: 10vh;
+  padding: 0 1.25rem;
+
+  * {
+    color: #fff;
+  }
+
+  .appTitle {
+    font-size: 3rem;
+  }
+
+  .optionsContainer {
+    justify-self: end;
+
+    button {
+      padding: 0.75rem;
+      background-color: $lightBlue;
+      border: 1px solid #ccc;
+      margin-right: 0.5rem;
+      cursor: pointer;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subTitle {
+  height: 12vh;
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+
+#wordDisplay {
+  font-size: 6rem;
+  text-align: center;
+
+  span {
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    &.hidden {
+      visibility: hidden;
+
+      &::after {
+        visibility: visible;
+        content: "_";
+      }
+    }
+  }
+}
+
+#triesDisplay {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-evenly;
+}
+
+#lettersTriedDisplay {
+  font-size: 4rem;
+}
+
+input {
+  font-size: 2.25rem;
+  border: 3px solid #8a8a8a;
+  border-radius: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+  width: 60vw;
+  margin: 0 auto;
+
+  &:focus {
+    outline: 0;
+  }
+}
